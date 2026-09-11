@@ -10,7 +10,7 @@ Windows 콘솔 환경에서 방향키(`↑`, `↓`, `←`, `→`)를 이용해 �
 
 ## 🔍 핵심 함수 설명
 
-* # gotoxy(int x, int y)
+* gotoxy(int x, int y)
 
 Windows API(SetConsoleCursorPosition)를 활용하여 콘솔 창 내에서 원하는 좌표로 커서를 즉시 이동시킵니다.
 
