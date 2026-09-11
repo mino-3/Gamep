@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <conio.h>
 
 void draw_square(int size);
 
@@ -10,13 +11,15 @@ int main(void) {
     printf("정사각형의 길이(최대 37)를\n");
     printf("입력하고 Enter>");
     scanf("%d", &n);
+
     draw_square(n);
 
     printf("Esc키를 눌러서 종료");
-    key = getch();
-    if (key==27) {
-        return 0;
-    }
+    do{
+        key = getch();
+    } while (key != 27);
+
+    return 0;
 }
 
 void draw_square(int size) {
@@ -27,12 +30,16 @@ void draw_square(int size) {
     for(i=1;i<7;i++) {
         b[i]=0xa0+i;
     }
+
+    //상단 테두리
     printf("%c%c",a, b[3]);
     for(i=0;i<size*2;i++) {
         printf("%c%c", a, b[1]);
     }
     printf("%c%c", a, b[4]);
     printf("\n");
+
+    //중간 빈 공간간
     for(i=0;i<size;i++) {
         printf("%c%c", a, b[2]);
         for(j=0;j<size*2;j++)
@@ -40,6 +47,8 @@ void draw_square(int size) {
         printf("%c%c",a, b[2]);
         printf("\n");
     }
+
+    //하단 테두리리
     printf("%c%c", a, b[6]);
     for(i=0;i<size*2;i++) {
         printf("%c%c", a, b[1]);
