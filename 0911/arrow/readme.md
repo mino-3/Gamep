@@ -8,9 +8,9 @@ Windows 콘솔 환경에서 방향키(`↑`, `↓`, `←`, `→`)를 이용해 �
 * **방향키 (`↑`, `↓`, `←`, `→`)**: 문자 'A'를 상하좌우로 이동시킵니다. (콘솔 창 크기 경계 제한 적용)
 * **`Esc` 키 (아스키코드 27)**: 프로그램을 종료합니다.
 
-🔍 핵심 함수 설명
+## 🔍 핵심 함수 설명
 
-* gotoxy(int x, int y)
+* # gotoxy(int x, int y)
 
 Windows API(SetConsoleCursorPosition)를 활용하여 콘솔 창 내에서 원하는 좌표로 커서를 즉시 이동시킵니다.
 
@@ -24,5 +24,5 @@ Windows API(SetConsoleCursorPosition)를 활용하여 콘솔 창 내에서 원�
 
 <conio.h>의 getch()를 통해 엔터 없이 키 입력을 즉시 감지하며, 이동 시 화면을 갱신(cls)하여 애니메이션 효과를 구현합니다.
 
-⚠️ 실행 환경 주의사항
+## ⚠️ 실행 환경 주의사항
 * 본 코드는 Windows 운영체제(Visual Studio, Dev-C++ 등)의 명령 프롬프트(CMD) 환경을 기준으로 작성되었습니다. (windows.h, conio.h 사용)
