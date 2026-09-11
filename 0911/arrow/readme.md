@@ -10,17 +10,17 @@ Windows 콘솔 환경에서 방향키(`↑`, `↓`, `←`, `→`)를 이용해 �
 
 ## 🔍 핵심 함수 설명
 
-* ### gotoxy(int x, int y)
+* #### gotoxy(int x, int y)
 
 Windows API(SetConsoleCursorPosition)를 활용하여 콘솔 창 내에서 원하는 좌표로 커서를 즉시 이동시킵니다.
 
-* move_arrow_key(...)
+* ### move_arrow_key(...)
 
 입력된 확장 키 코드(72, 75, 77, 80)를 분석하여 좌표 값을 갱신합니다.
 
 콘솔 글꼴의 세로 비율을 고려해 가로 이동 시 x 좌표를 2칸씩 처리하며, 화면 밖으로 나가지 않도록 경계 처리를 포함하고 있습니다.
 
-* getch() & system("cls")
+* ### getch() & system("cls")
 
 <conio.h>의 getch()를 통해 엔터 없이 키 입력을 즉시 감지하며, 이동 시 화면을 갱신(cls)하여 애니메이션 효과를 구현합니다.
 
